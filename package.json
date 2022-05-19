@@ -2,10 +2,13 @@
   "name": "server",
   "version": "1.0.0",
   "description": "Webserver for opennote.no. Going to be built with Express.",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Martin Høghaug Larsen",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
