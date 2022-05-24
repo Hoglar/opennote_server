@@ -3,7 +3,9 @@ const app = express();
 const port = 3000
 const path = require("path");
 
-app.use(express.static("/home/hoglar/opennote_re/frontend"))
+const project_root = path.join(__dirname, "/..")
+
+app.use(express.static(path.join(project_root, "/public")));
 
 app.get("/", (req, res) => {
     console.log("Here")
@@ -11,11 +13,11 @@ app.get("/", (req, res) => {
 
 
 app.get("/api", (req, res) => {
-    console.log(__dirname)
+    console.log(project_root);
     res.sendFile(path.join("/home/hoglar/opennote_re/frontend", "/index.html"));
 })
 
 
 app.listen(port, () => {
-    console.log("Running at port")
+    console.log("Server is up and running!")
 })
